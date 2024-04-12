@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Mollie';
+    src: url('Mollie.ttf') format('truetype'); /* Ruta relativa al archivo CSS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Mollie';
+    background-color: #5183C2; /* Cambiar este valor por el color deseado */
+}
+

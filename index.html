@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="/templates/EstilosEuropa.css">
+
+    <title>Subvenciones Europeas</title>
+	
+</head>
+
+<body>
+
+    <h1>Subvenciones Europeas</h1>
+		<table style="width:10%">
+  <tr>
+    <th>Subenciones</th>
+    <th>Noticias</th>
+    <th>Europa</th>
+  </tr>
+   <tr>
+    <td>España</td>
+    <td>Ultimas Subvenciones</td>
+    <td>Enlace</td>
+  </tr>
+    </table>
+    <ul>
+        {% for quote in quotes %}
+        <li>
+            <blockquote>{{ quote.text }}</blockquote>
+            <p>- {{ quote.author }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
