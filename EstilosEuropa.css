@@ -1,12 +1,245 @@
 @font-face {
     font-family: 'Mollie';
-    src: url('Mollie.ttf') 
+    src: url('Mollie.ttf') format('truetype');
+    /* Ruta relativa al archivo CSS */
     font-weight: normal;
     font-style: normal;
 }
 
-body {
-    font-family: 'Mollie';
-    background-color: #5183C2; 
+.paginacion {
+    margin-top: 2%;
 }
 
+.pagina {
+    display: inline-block;
+    padding: 1% 2%;
+    margin-right: 1%;
+    border: 0, 5% solid #ccc;
+    cursor: pointer;
+}
+
+.pagina:hover {
+    background-color: #f1f1f1;
+}
+
+.pagina.actual {
+    background-color: rgba(54, 84, 130, 0.548);
+}
+.container-img{
+    background-image: url(abogado.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:relativa;
+    width:20%;
+}
+.div-con-imagen {
+    width: 100%;
+    height: 10%;
+    /* Reducir la altura de la imagen de cabecera */
+    background: rgba(54, 84, 130, 0.548);
+    background-image: url('REGLADO.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.div-con-imagen.hidden {
+    margin-top: 8%;
+    /* Ajustar el margen superior cuando la imagen está oculta */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* Transición de la opacidad para un efecto suave */
+}
+
+.contenido {
+    padding-top: 8%;
+    /* Ajustar el margen superior del contenido */
+}
+
+
+h1 {
+    font-family: 'Mollie';
+    color: white;
+    text-align: center;
+}
+
+.th {
+    font-size: 30px;
+
+}
+
+body {
+
+    background-color: rgba(39, 61, 92, 0.4);
+
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 1%;
+    background-repeat: no-repeat;
+    background-position:
+        center top;
+    background-size: auto;
+}
+
+/* Otros estilos aquí */
+
+
+
+/* Otros estilos aquí */
+
+td {
+    color: white;
+    height: 200px;
+    width: 60%;
+
+
+    font-size: 22px;
+}
+
+th {
+    color: rgb(255, 255, 255);
+    height: 100px;
+    width: 50%;
+
+    font-size: 25px;
+}
+
+a {
+    color: white;
+}
+
+title {
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+table {
+
+    max-width: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-width: 1%;
+    background-color: rgb(54, 85, 130, 0.6);
+   border-radius: 30px;
+    background-image: url(logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin-right: 50px;
+
+
+}
+
+.enlaces {
+    height: 200px;
+    width: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.table td,
+.table th {
+    text-align: left;
+
+    padding: 8px;
+}
+
+.mt-5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Columnas responsivas */
+    gap: 20px;
+    /* Espacio entre los elementos */
+
+}
+
+.highlight {
+    background-color: rgb(68, 127, 214) !important;
+    color: rgb(221, 255, 71);
+    font-weight: bolder;
+}
+
+#buscador {
+    padding: 1%;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 300px;
+    padding-left: 4%;
+}
+
+#buscador::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+#buscador:focus {
+    border-color: #007bff;
+}
+footer {
+    background-color: ; /* Color de fondo del footer */
+    padding: 20px; /* Espaciado interno del footer */
+    display: flex; /* Utilizar flexbox */
+    justify-content: space-between; /* Distribuir los elementos uniformemente */
+}
+
+.uno, .dos, .tres {
+    flex: 1; /* Que cada elemento ocupe la misma cantidad de espacio */
+    margin-right: 1.5%; /* Margen derecho para separar las celdas */
+    border-style: solid; /* Tipo de borde */
+    border-width: 2px; /* Ancho del borde */
+    border-color: #f1f1f1; /* Color del borde */
+    padding: 10px 0;
+}
+
+
+.uno {
+    background-color: rgb(54, 85, 130,0.6); /* Color de fondo de la primera celda */
+    border-radius: 15px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+.dos {
+    background-color: rgb(54, 85, 130,0.6); /* Color de fondo de la segunda celda */
+    border-radius: 15px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.tres {
+    background-color: rgb(54, 85, 130,0.6); /* Color de fondo de la tercera celda */
+    border-radius: 15px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto al centro */
+    margin-right: 0; /* Eliminar margen derecho para la última celda */
+}
+
+#logoblanco{
+    width:265px;
+    height:200px;
+}
+
+/*#5183C2;
+
+    --e-global-color-0408702: #365582;
+    --e-global-color-e4ca670: #273D5C;
+    --e-global-color-13e7b21: #1A1A1A;
+    --e-global-color-ed552a8: #444B52;*/

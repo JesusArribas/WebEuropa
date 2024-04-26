@@ -1,39 +1,371 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="stylesheet" type="text/css" href="/templates/EstilosEuropa.css">
 
-    <title>Subvenciones Europeas</title>
-	
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="templates/EstilosEuropa.css">
+  <link rel="stylesheet" type="text/css" href="templates/EuroBootstrap.css">
+  <title>Subvenciones Europeas</title>
+  <link rel="icon" href="templates/logo.jpg" type="image/jpg">
 </head>
 
 <body>
 
-    <h1>Subvenciones Europeas</h1>
-	
-    <ul>
-		<table style="width:10%">
-  <tr>
-    <th>Subenciones</th>
-    <th>Noticias</th>
-    <th>Europa</th>
-  </tr>
-   <tr>
-    <td>España</td>
-    <td>Ultimas Subvenciones</td>
-    <td>Enlace</td>
-  </tr>
-    </table>
-        {% for quote in quotes %}
-        <li>
-            <blockquote>{{ quote.text }}</blockquote>
-            <p>- {{ quote.author }}</p>
-        </li>
-        {% endfor %}
-    </ul>
+
+  <div class="div-con-imagen"></div>
+  <div class="contenido">
+    <div class="rotate-center"></div>
+    <h1 >Subvenciones Europeas</h1>
+    <input type="text" id="buscador" placeholder="Buscar..." autofocus>
+
+
+    <div class="container"> 
+      <div class="rotate-center"></div>
+      <table class="table" id="miTabla">
+
+        <thead>
+          <tr>
+            <th>Subvenciones</th>
+            <th></th>
+            <th>Fecha</th>
+            <th>CCAA</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in europa %}
+          <tr>
+            <td id="titulo">{{ item[0] }}</td>
+            <td class="enlaces"><a href=" https://regladoconsultores.com/ ">Leer más...</a></td>
+            <td id="fecha">{{ item[1] }}</td>
+            <td id="CCAA">{{ item[2] }}</td>
+            <td id="tipo">{{ item[3] }}</td>
+            <td id="estado">{{ item[4] }}</td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table class="table">
+      <table id="miTabla2">
+
+        <thead>
+          <tr>
+            <th>Consultoría Jurídica</th>
+            <th>Consultoría Técnica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Asesoría Jurídica De Entidades Locales</td>
+            <td>Consultoría Energética</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>Asesoría En Contratación Pública</td>
+            <td>Energías Renovables</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>Asesoría En Contratación Pública</td>
+            <td>Licencias Urbanísticas</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>Permanente En Materia De Estrategia Política Y Comunicativa</td>
+            <td>Licencias De Actividad</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 </body>
+<div id="paginacion" class="paginacion"></div>
+<footer>
+  <div class="uno">
+    <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-64b845c elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="64b845c" data-element_type="widget" data-widget_type="icon.default">
+  <div class="elementor-widget-container">
+    <div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="tel:+34%20615%2064%2010%2081">
+<i aria-hidden="true" class="fas fa-phone-alt"></i>			</a>
+</div>
+  </div>
+  </div>
+  <div class="elementor-element elementor-element-41cb8871 elementor-widget elementor-widget-heading" data-id="41cb8871" data-element_type="widget" data-widget_type="heading.default">
+  <div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-default">Teléfono:</span> </div>
+  </div>
+  <div class="elementor-element elementor-element-b30a614 elementor-widget elementor-widget-heading" data-id="b30a614" data-element_type="widget" data-widget_type="heading.default">
+  <div class="elementor-widget-container">
+<p class="elementor-heading-title elementor-size-default"><a href="tel:+34%20615%2064%2010%2081">+34 615 64 10 81</a></p>		</div>
+  </div>
+    </div>
+    <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-985810d elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="985810d" data-element_type="widget" data-widget_type="icon.default">
+  <div class="elementor-widget-container">
+    <div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="https://goo.gl/maps/aT9uxZiR9sdqSpHAA">
+<i aria-hidden="true" class="fas fa-map-marker-alt"></i>			</a>
+</div>
+  </div>
+  </div>
+  <div class="elementor-element elementor-element-3e764933 elementor-widget elementor-widget-heading" data-id="3e764933" data-element_type="widget" data-widget_type="heading.default">
+  <div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-default">Oficina:</span>		</div>
+  </div>
+  <div class="elementor-element elementor-element-8729532 elementor-widget elementor-widget-heading" data-id="8729532" data-element_type="widget" data-widget_type="heading.default">
+  <div class="elementor-widget-container">
+<p class="elementor-heading-title elementor-size-default"><a href="https://goo.gl/maps/aT9uxZiR9sdqSpHAA">C. San Isidro, 28 16620 La Alberca de Záncara Cuenca</a></p>		</div>
+  </div>
+    </div>
+    <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-bba1288 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="bba1288" data-element_type="widget" data-widget_type="icon.default">
+  <div class="elementor-widget-container">
+    <div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="mailto:info@regladoconsultores.com">
+<i aria-hidden="true" class="fas fa-envelope-open"></i>			</a>
+</div>
+  </div>
+  </div>
+  <div class="elementor-element elementor-element-509ec579 elementor-widget elementor-widget-heading" data-id="509ec579" data-element_type="widget" data-widget_type="heading.default">
+  <div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-default">Email:</span>		</div>
+  </div>
+  <div class="elementor-element elementor-element-0f03a1f elementor-widget elementor-widget-heading" data-id="0f03a1f" data-element_type="widget" data-widget_type="heading.default">
+  <div class="elementor-widget-container">
+<p class="elementor-heading-title elementor-size-default"><a href="mailto:info@regladoconsultores.com">info@regladoconsultores.com</a></p>		</div>
+  </div>
+    </div>
+
+</div>
+
+<div class="dos">
+  <a href="https://regladoconsultores.com">
+  <img class="ani" id="logoblanco" src="templates/logo_blanco.png">
+  </a>
+</div>
+
+<div class="tres">
+  <div class="elementor-widget-wrap elementor-element-populated">
+    <div class="elementor-element elementor-element-a576e51 elementor-widget elementor-widget-heading" data-id="a576e51" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+  <span class="elementor-heading-title elementor-size-default" style="text-transform: uppercase;">Páginas</span>
+</div>
+</div>
+<div class="elementor-element elementor-element-5e2b951 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5e2b951" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+  <ul class="elementor-icon-list-items">
+      <p class="elementor-icon-list-item">
+              <a href="https://regladoconsultores.com/sobre-nosotros/">
+
+              <span class="elementor-icon-list-text">Nosotros</span>
+              </a>
+            </p>
+        <p class="elementor-icon-list-item">
+              <a href="https://regladoconsultores.com/contacto/">
+
+              <span class="elementor-icon-list-text">Contacto</span>
+              </a>
+            </p>
+        <p class="elementor-icon-list-item">
+              <a href="https://regladoconsultores.com/inspecciones-tributarias/">
+
+              <span class="elementor-icon-list-text">Inspecciones Tributarias</span>
+              </a>
+            </p>
+        <p class="elementor-icon-list-item">
+              <a href="https://regladoconsultores.com/consultoria-juridica/">
+
+              <span class="elementor-icon-list-text">Consultoría Jurídica</span>
+              </a>
+            </p>
+        <p class="elementor-icon-list-item">
+              <a href="https://regladoconsultores.com/consultoria-economica/">
+
+              <span class="elementor-icon-list-text">Consultoría Económica</span>
+              </a>
+            </p>
+        <p class="elementor-icon-list-item">
+              <a href="https://regladoconsultores.com/consultoria-tecnica/">
+
+              <span class="elementor-icon-list-text">Consultoría Técnica</span>
+              </a>
+            </p>
+    </ul>
+</div>
+</div>
+  </div>
+</div>
+</footer>
+<script>
+  window.addEventListener('scroll', function () {
+    var divConImagen = document.querySelector('.div-con-imagen');
+    var contenido = document.querySelector('.contenido');
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop - 40 > contenido.offsetTop) {
+      divConImagen.classList.add('hidden');
+      contenido.classList.add('margen-superior'); // Agregar margen superior al contenido
+    } else {
+      divConImagen.classList.remove('hidden');
+      contenido.classList.remove('margen-superior'); // Quitar margen superior al contenido
+    }
+  });
+
+</script>
+<!-- Brevo Conversations {literal} -->
+<script>
+  (function (d, w, c) {
+    w.BrevoConversationsID = '660e572dcc2d7c13ce0342a5';
+    w[c] = w[c] || function () {
+      (w[c].q = w[c].q || []).push(arguments);
+    };
+    var s = d.createElement('script');
+    s.async = true;
+    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+    if (d.head) d.head.appendChild(s);
+  })(document, window, 'BrevoConversations');
+</script>
+<!-- /Brevo Conversations {/literal} -->
+<script type="text/javascript">
+  (function () {
+    window.sib = {
+      equeue: [],
+      client_key: "6ykm4s87l028re5qpfsk84jr"
+    };
+    /* OPTIONAL: email for identify request*/
+    // window.sib.email_id = 'example@domain.com';
+    window.sendinblue = {};
+    for (var j = ['track', 'identify', 'trackLink', 'page'], i = 0; i < j.length; i++) {
+      (function (k) {
+        window.sendinblue[k] = function () {
+          var arg = Array.prototype.slice.call(arguments);
+          (window.sib[k] || function () {
+            var t = {};
+            t[k] = arg;
+            window.sib.equeue.push(t);
+          })(arg[0], arg[1], arg[2], arg[3]);
+        };
+      })(j[i]);
+    }
+    var n = document.createElement("script"),
+      i = document.getElementsByTagName("script")[0];
+    n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
+  })();
+</script>
+<script>
+  const filasPorPagina = 10; // Cambia este valor según cuántas filas quieres mostrar por página
+  const input = document.getElementById('buscador');
+  const tabla = document.getElementById('miTabla');
+  const tbody = tabla.querySelector('tbody');
+  const paginacion = document.getElementById('paginacion');
+  const tr = Array.from(tabla.querySelectorAll('tbody tr'));
+
+  let resultadosFiltrados = [];
+  let paginaActual = 1;
+
+  input.addEventListener('keyup', function () {
+    filtrarYMostrar();
+  });
+
+  function filtrarYMostrar() {
+    const filtro = input.value.toLowerCase(); // Convertir la entrada a minúsculas para la comparación
+    resultadosFiltrados = tr.filter(fila => {
+      const textoFila = fila.textContent.toLowerCase(); // Convertir el texto de la fila a minúsculas
+      return textoFila.includes(filtro);
+    });
+
+    paginaActual = 1;
+    mostrarPagina(paginaActual);
+  }
+
+  function mostrarPagina(pagina) {
+    const inicio = (pagina - 1) * filasPorPagina;
+    const fin = inicio + filasPorPagina;
+    const resultadosPagina = resultadosFiltrados.slice(inicio, fin);
+
+    tbody.innerHTML = '';
+    for (const fila of resultadosPagina) {
+      const filaClonada = fila.cloneNode(true);
+      resaltarTexto(filaClonada); // Resaltar texto coincidente
+      tbody.appendChild(filaClonada);
+    }
+
+    mostrarPaginas();
+  }
+
+  function resaltarTexto(fila) {
+    const filtro = input.value.toLowerCase(); // Convertir la entrada a minúsculas para la comparación
+    fila.querySelectorAll('td').forEach((cell, index) => {
+      const contenidoOriginal = cell.textContent; // Obtener texto de la celda
+      if (index !== 1) { // Ignorar la segunda columna
+        const contenidoResaltado = contenidoOriginal.replace(new RegExp(filtro, 'gi'), match => `<span class="highlight">${match}</span>`); // Resaltar texto coincidente
+        cell.innerHTML = contenidoResaltado;
+      }
+    });
+  }
+
+
+
+  function mostrarPaginas() {
+    const totalPaginas = Math.ceil(resultadosFiltrados.length / filasPorPagina);
+
+    let paginasAMostrar = [];
+
+    for (let i = Math.max(1, paginaActual - 2); i <= Math.min(totalPaginas, paginaActual + 2); i++) {
+      paginasAMostrar.push(i);
+    }
+
+    paginacion.innerHTML = '';
+
+    // Agregar botón para ir a la primera página
+    const first = document.createElement('span');
+    first.innerText = 'Inicio';
+    first.className = 'pagina';
+    first.addEventListener('click', function () {
+      paginaActual = 1;
+      mostrarPagina(paginaActual);
+    });
+    paginacion.appendChild(first);
+
+    // Agregar números de páginas
+    for (const pagina of paginasAMostrar) {
+      const span = document.createElement('span');
+      span.innerText = pagina;
+      span.className = 'pagina';
+      if (pagina === paginaActual) {
+        span.classList.add('actual');
+      }
+      span.addEventListener('click', function () {
+        paginaActual = pagina;
+        mostrarPagina(paginaActual);
+      });
+      paginacion.appendChild(span);
+    }
+
+    // Agregar botón para ir a la última página
+    const last = document.createElement('span');
+    last.innerText = 'Último';
+    last.className = 'pagina';
+    last.addEventListener('click', function () {
+      paginaActual = totalPaginas;
+      mostrarPagina(paginaActual);
+    });
+    paginacion.appendChild(last);
+  }
+
+  // Mostrar la primera página al cargar
+  filtrarYMostrar();
+
+</script>
+
+
+
 </html>

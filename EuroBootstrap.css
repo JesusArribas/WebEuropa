@@ -1,0 +1,47 @@
+/* Tu CSS anterior */
+@keyframes miAnimacion {
+    0% {
+        transform: rotate(0deg); /* Comenzar desde 0 grados */
+    }
+    50% {
+        transform: rotate(360deg); /* Girar 360 grados */
+    }
+}
+
+/* Prefijos de navegadores */
+@-webkit-keyframes miAnimacion {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Clase con animación */
+.ani:hover {
+    animation: miAnimacion 2s ease-in-out;
+    -webkit-animation: miAnimacion 2s ease-in-out;
+}
+
+.bodyani {
+    width: 100%; /* Ancho de la página del libro */
+    height: 100%; /* Altura de la página del libro */
+    background: url('ruta/a/la/imagen.jpg') center/cover; /* Imagen de fondo */
+    position: fixed; /* Posicionamiento fijo */
+    top: 0; /* Arriba */
+    left: 0; /* Izquierda */
+    transition: transform 2s; /* Transición de transformación */
+    transform-origin: left center; /* Punto de origen de la transformación */
+    transform: perspective(2000px) rotateY(0deg); /* Rotación inicial */
+}
+
+.bodyani.abierto {
+    transform: perspective(2000px) rotateY(-180deg); /* Rotación de la página */
+}
+
+
+/* Otras reglas de estilo aquí */
